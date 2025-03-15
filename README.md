@@ -1,3 +1,24 @@
+Antes de empesar a usar el front end ir a la base de datos sql server y ejecutar las siguientes consultas
+
+  INSERT INTO Productos(
+      nombre,descripcion,precio,stock)
+ VALUES('JAVON','BANO',1500,40);
+
+   INSERT INTO Productos(  nombre ,descripcion,precio,stock)
+ VALUES('leche','polvo',1500,40);
+
+     INSERT INTO Usuarios( nombre,tipodocumento,numerodocumento
+      ,rol,email,password )
+ VALUES('guiovanny caro',1,79848026,1,'guiovanny.caro@outlook.com','Admin123');
+
+     INSERT INTO Usuarios( nombre,tipodocumento,numerodocumento
+      ,rol,email,password )
+ VALUES('luz daza',1,41410317,2,'guiovanny.caro@gmail.com','Admin123');
+
+      INSERT INTO Usuarios( nombre,tipodocumento,numerodocumento
+      ,rol,email,password )
+ VALUES('marina',1,41500317,3,'marinagodoy@gmail.com','Admin123');
+
 # FrontGrupoAlianzaNet
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.16.
