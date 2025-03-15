@@ -1,0 +1,53 @@
+<form [formGroup]="productoForm" (ngSubmit)="onSubmit()">
+
+    <div style="width: 80% !important;MARGIN: 0% 5% 0% 10%;">
+
+        <div class="row col-xs-12">
+            <h1 style="margin: 3% 0% 0% 20% ;text-align: center;"><b> Nuevo Producto</b></h1>
+        </div>
+
+        <div class="row col-xs-6">
+            <div class="col">
+                <label for="lnombre">Nombre</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" formControlName="nombre" placeholder="Nombre">
+            </div>
+            <div class="col">
+                <label for="ldescripcion">Descripcion</label>
+
+                <input type="text" class="form-control" id="descripcion" name="descripcion" formControlName="descripcion" placeholder="Descripcion">
+            </div>
+        </div>
+
+        <div class="row col-xs-6">
+            <div class="col">
+                <label for="lnombre">Precio</label>
+                <input type="number" class="form-control" id="precio" name="precio" formControlName="precio" placeholder="precio">
+            </div>
+            <div class="col">
+                <label for="ldescripcion">Stock</label>
+
+                <input type="number" class="form-control" id="stock" name="stock" formControlName="stock" placeholder="Stock">
+            </div>
+        </div>
+
+
+        <div class="row col-xs-12">
+            <div>&nbsp;
+                <input type="hidden" class="form-control" id="idproducto" name="idproducto" formControlName="idproducto" value="0">
+            </div>
+        </div>
+        <div class="row col-xs-12">
+            <div class="col" style=" text-align: center;">
+                <button type="button" class="btn btn-primary" mat-dialog-close="true">Cancelar</button>
+            </div>
+            <div class="col" style=" text-align: center;">
+                <button type="submit" [mat-dialog-close]="true" class="btn btn-success">Guardar</button>
+            </div>
+        </div>
+
+
+        <div class="row col-xs-12">
+            <div>&nbsp;</div>
+        </div>
+    </div>
+</form>

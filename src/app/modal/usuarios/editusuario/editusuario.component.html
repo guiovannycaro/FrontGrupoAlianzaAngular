@@ -1,0 +1,81 @@
+<table>
+    <tr *ngFor="let i of usuariosar">
+        <td>
+            <form (ngSubmit)="onSubmit()">
+
+                <div style="width: 80% !important;MARGIN: 0% 5% 0% 10%;">
+
+                    <div class="row col-xs-12">
+                        <h1 style="margin: 3% 0% 0% 20% ;text-align: center;"><b> Editar Producto</b></h1>
+                    </div>
+
+                    <div class="row col-xs-6">
+                        <div class="col">
+                            <label for="lnombre">Nombre</label>
+                            <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="i.nombre" placeholder="Nombre">
+                        </div>
+                        <div class="col">
+                            <label for="ldescripcion">Tipo Documento</label>
+
+                            <select class="form-select" aria-label="Default select example" id="doctype" name="doctype" [(ngModel)]="i.tipodocumento" style="width: 100%;height: 38px;border: 1px solid #ced4da">
+                              <option [value]='0' selected>Select Option</option>
+                              <option [value]='1'>Cedula</option>
+                              <option [value]='2'>Nit</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row col-xs-6">
+                        <div class="col">
+                            <label for="lnombre">Numero Documento</label>
+                            <input type="number" class="form-control" id="numerodocumento" name="numerodocumento" [(ngModel)]="i.numerodocumento" placeholder="Numero Documento">
+                        </div>
+                        <div class="col">
+                            <label for="ldescripcion">Rol</label>
+
+                            <select class="form-select" aria-label="Default select example" id="doctype" name="doctype" [(ngModel)]="i.rol" style="width: 100%;height: 38px;border: 1px solid #ced4da">
+                              <option [value]='0' selected>Select Option</option>
+                              <option [value]='1'>Super Administraddor</option>
+                              <option [value]='2'>Administrador</option>
+                              <option [value]='3'>Empleado</option>
+                            </select>
+                        </div>
+                    </div>
+
+
+                    <div class="row col-xs-6">
+                        <div class="col">
+                            <label for="lnombre">Correo Electronico</label>
+                            <input type="email" class="form-control" id="email" name="email" [(ngModel)]="i.email" placeholder="Correo">
+                        </div>
+                        <div class="col">
+                            <label for="ldescripcion">Contraseña</label>
+
+                            <input type="password" class="form-control" id="password" name="password" [(ngModel)]="i.password" placeholder="Contrasena">
+                        </div>
+                    </div>
+
+
+                    <div class="row col-xs-12">
+                        <div>&nbsp;
+                            <input type="hidden" class="form-control" id="idproducto" name="idproducto" [(ngModel)]="i.idusuario">
+                        </div>
+                    </div>
+                    <div class="row col-xs-12">
+                        <div class="col" style=" text-align: center;">
+                            <button type="button" class="btn btn-primary" mat-dialog-close="true">Cancelar</button>
+                        </div>
+                        <div class="col" style=" text-align: center;">
+                            <button type="submit" [mat-dialog-close]="true" class="btn btn-success">Guardar</button>
+                        </div>
+                    </div>
+
+
+                    <div class="row col-xs-12">
+                        <div>&nbsp;</div>
+                    </div>
+                </div>
+            </form>
+        </td>
+    </tr>
+</table>
